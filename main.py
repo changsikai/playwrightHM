@@ -47,7 +47,6 @@ def run(playwright: Playwright) -> None:
             result = ocr.classification(img_bytes)
             print(result)
 
-
             page.get_by_role("textbox", name="验证码").fill(input("请输入验证码"))
 
             page.get_by_role("button", name="会员注册").click()
